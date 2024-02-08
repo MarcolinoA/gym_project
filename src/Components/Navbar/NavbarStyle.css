@@ -1,0 +1,65 @@
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  background-color: red;
+  color: white;
+}
+
+@media screen and (max-width: 415px) {
+  .container {
+    background-color: chocolate;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  }
+}
+
+.logo,
+.navigate {
+  flex: 1;
+}
+
+.logo {
+  align-items: center;
+  justify-content: center;
+}
+
+.navigate {
+  display: flex;
+  flex-direction: row;
+}
+
+.menu-icon-svg {
+  display: none;
+}
+
+@media screen and (max-width: 415px) {
+  .menu-icon-svg {
+    display: block;
+  }
+}
+
+.container-btns {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 415px) {
+  .container-btns {
+    display: none;
+  }
+}
+
+.home-page,
+.chi-siamo,
+.attivita,
+.info,
+.contattaci {
+  flex: 1;
+  margin: 0px 30px;
+  cursor: pointer;
+}
