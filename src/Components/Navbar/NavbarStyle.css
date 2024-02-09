@@ -3,19 +3,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  height: 80px;
-  background-color: red;
-  color: white;
-}
 
-@media screen and (max-width: 415px) {
-  .container {
-    background-color: chocolate;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 150px;
-  }
+  background-color: black;
+  color: white;
 }
 
 .logo,
@@ -26,6 +16,7 @@
 .logo {
   align-items: center;
   justify-content: center;
+  margin-top: 12px;
 }
 
 .navigate {
@@ -37,10 +28,28 @@
   display: none;
 }
 
-@media screen and (max-width: 415px) {
-  .menu-icon-svg {
-    display: block;
-  }
+input {
+}
+
+.menu-icon-svg.show-icon {
+  height: 40px;
+}
+
+.label-menu {
+  width: 40px;
+  height: 40px;
+  background: transparent;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
 }
 
 .container-btns {
@@ -48,18 +57,79 @@
   flex-direction: row;
 }
 
-@media screen and (max-width: 415px) {
-  .container-btns {
-    display: none;
-  }
-}
-
 .home-page,
-.chi-siamo,
+.personale,
 .attivita,
 .info,
 .contattaci {
   flex: 1;
   margin: 0px 30px;
   cursor: pointer;
+}
+
+@media screen and (max-width: 415px) {
+  .container {
+    background-color: black;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 150px;
+  }
+}
+@media screen and (max-width: 415px) {
+  .menu-icon-svg {
+    display: block;
+  }
+}
+@media screen and (max-width: 415px) {
+  .container-btns {
+    display: none;
+  }
+}
+
+.container.drop-menu {
+  height: 350px;
+}
+
+.navigate.drop-menu {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container-btns.drop-menu {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.dropdown {
+  height: 375px;
+  overflow: hidden;
+  transition: height 1s ease;
+}
+
+.open {
+  height: 350px;
+}
+
+.home-page.drop-menu,
+.personale.drop-menu,
+.attivita.drop-menu,
+.info.drop-menu,
+.contattaci.drop-menu {
+  cursor: pointer;
+  background-color: white;
+  color: black;
+  margin: 10px;
+  padding: 0;
+  width: 226px;
+  height: 40px;
+  border-radius: 20px;
+  text-align: center;
+  font-size: large;
+  letter-spacing: 1px;
+  box-shadow: 0px 2px 8px 1px rgba(160, 156, 156, 0.801);
 }
